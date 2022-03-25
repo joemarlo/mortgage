@@ -25,7 +25,7 @@ return_sim <- function(n, n_years, market_return, market_vol){
                year = seq_len(n_years),
                return = returns_annual,
                return_cum = cumprod(returns_annual),
-               return_rev = cumprod(rev(returns_annual)))
+               return_rev = rev(cumprod(rev(returns_annual))))
     })
 }
 
